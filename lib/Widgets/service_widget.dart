@@ -8,98 +8,116 @@ class ServiceWidget extends StatelessWidget {
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child: Padding(
-        padding: EdgeInsets.symmetric(vertical: 15,horizontal: 5),
-        child: Row(children: [
-          Padding(padding: EdgeInsets.symmetric(horizontal: 10),
-            child: Container(
-              padding: EdgeInsets.all(8),
-              decoration: BoxDecoration(
-                color: Colors.greenAccent,
-                borderRadius: BorderRadius.circular(10),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.grey.withOpacity(0.5),
-                    blurRadius: 2,
-                    spreadRadius: 3,
-                    offset: Offset(0, 3)
-                  )
-                ]
-              ),
-              child: Image.asset(
-                'assets/goverment.png',
-                height: 70,
-                width: 70,
+        padding: EdgeInsets.symmetric( horizontal: 5),
+        child: Row(
+          children: [
+            MaterialButton(
+              onPressed: () {
+                Navigator.pushReplacementNamed(context, '/profile');
+              },
+              child: Padding(
+                padding: EdgeInsets.symmetric(horizontal: 10),
+                child: Container(
+                  padding: EdgeInsets.all(8),
+                  decoration: BoxDecoration(
+                      color: Colors.greenAccent,
+                      borderRadius: BorderRadius.circular(10),
+                      boxShadow: [
+                        BoxShadow(
+                            color: Colors.grey.withOpacity(0.5),
+                            blurRadius: 2,
+                            spreadRadius: 3,
+                            offset: Offset(0, 3))
+                      ]),
+                  child: Image.asset(
+                    'assets/goverment.png',
+                    height: 70,
+                    width: 70,
+                  ),
                 ),
-            ),
-          ),
-          Padding(padding: EdgeInsets.symmetric(horizontal: 10),
-            child: Container(
-              padding: EdgeInsets.all(8),
-              decoration: BoxDecoration(
-                color: Colors.greenAccent,
-                borderRadius: BorderRadius.circular(10),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.grey.withOpacity(0.5),
-                    blurRadius: 2,
-                    spreadRadius: 3,
-                    offset: Offset(0, 3)
-                  )
-                ]
               ),
-              child: Image.asset(
-                'assets/service.png',
-                height: 70,
-                width: 70,
-                ),
             ),
-          ),
-          Padding(padding: EdgeInsets.symmetric(horizontal: 10),
-            child: Container(
-              padding: EdgeInsets.all(8),
-              decoration: BoxDecoration(
-                color: Colors.greenAccent,
-                borderRadius: BorderRadius.circular(10),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.grey.withOpacity(0.5),
-                    blurRadius: 2,
-                    spreadRadius: 3,
-                    offset: Offset(0, 3)
-                  )
-                ]
+            MaterialButton(
+              onPressed: () {
+                Navigator.pushReplacementNamed(context, '/servicescreen');
+              },
+              child: Padding(
+                padding: EdgeInsets.symmetric(horizontal: 10),
+                child: Container(
+                  padding: EdgeInsets.all(8),
+                  decoration: BoxDecoration(
+                      color: Colors.greenAccent,
+                      borderRadius: BorderRadius.circular(10),
+                      boxShadow: [
+                        BoxShadow(
+                            color: Colors.grey.withOpacity(0.5),
+                            blurRadius: 2,
+                            spreadRadius: 3,
+                            offset: Offset(0, 3))
+                      ]),
+                  child: Image.asset(
+                    'assets/service.png',
+                    height: 70,
+                    width: 70,
+                  ),
+                ),
               ),
-              child: Image.asset(
-                'assets/bar.png',
-                height: 70,
-                width: 70,
-                ),
             ),
-          ),
-          Padding(padding: EdgeInsets.symmetric(horizontal: 10),
-            child: Container(
-              padding: EdgeInsets.all(8),
-              decoration: BoxDecoration(
-                color: Colors.greenAccent,
-                borderRadius: BorderRadius.circular(10),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.grey.withOpacity(0.5),
-                    blurRadius: 2,
-                    spreadRadius: 3,
-                    offset: Offset(0, 3)
-                  )
-                ]
+            MaterialButton(
+              onPressed: () {
+                Navigator.pushReplacementNamed(context, '/data');
+              },
+              child: Padding(
+                padding: EdgeInsets.symmetric(horizontal: 10),
+                child: Container(
+                  padding: EdgeInsets.all(8),
+                  decoration: BoxDecoration(
+                      color: Colors.greenAccent,
+                      borderRadius: BorderRadius.circular(10),
+                      boxShadow: [
+                        BoxShadow(
+                            color: Colors.grey.withOpacity(0.5),
+                            blurRadius: 2,
+                            spreadRadius: 3,
+                            offset: Offset(0, 3))
+                      ]),
+                  child: Image.asset(
+                    'assets/bar.png',
+                    height: 70,
+                    width: 70,
+                  ),
+                ),
               ),
-              child: Image.asset(
-                'assets/news.png',
-                height: 70,
-                width: 70,
-                ),
             ),
-          )
-        ],),
+            MaterialButton(
+              onPressed: () {
+                Navigator.pushReplacementNamed(context, '/profile');
+              },
+              child: Padding(
+                padding: EdgeInsets.symmetric(horizontal: 10),
+                child: Container(
+                  padding: EdgeInsets.all(8),
+                  decoration: BoxDecoration(
+                      color: Colors.greenAccent,
+                      borderRadius: BorderRadius.circular(10),
+                      boxShadow: [
+                        BoxShadow(
+                            color: Colors.grey.withOpacity(0.5),
+                            blurRadius: 2,
+                            spreadRadius: 3,
+                            offset: Offset(0, 3))
+                      ]),
+                  child: Image.asset(
+                    'assets/news.png',
+                    height: 70,
+                    width: 70,
+                  ),
+                ),
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
-}  
+}

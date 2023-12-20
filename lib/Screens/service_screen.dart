@@ -73,7 +73,9 @@ class AppBar extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
-          IconButton(icon: const Icon(Icons.arrow_back), onPressed: () {}, color: Colors.white,),
+          IconButton(icon: const Icon(Icons.arrow_back), onPressed: () {
+            Navigator.pushReplacementNamed(context, '/home');
+          }, color: Colors.white,),
           Text("News", style: Theme.of(context).textTheme.headlineSmall?.copyWith(color: Colors.white)),
           IconButton(onPressed: (){}, icon: const Icon(Icons.account_box_rounded),
           color: Theme.of(context).colorScheme.primary,)

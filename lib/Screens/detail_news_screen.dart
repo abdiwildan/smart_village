@@ -78,20 +78,20 @@ class _NewsHeadLine extends StatelessWidget {
           SizedBox(height: MediaQuery.of(context).size.height*0.15,),
           Text(
             article.title,
-            style: const TextStyle(
-              fontSize: 18,
-              color: Colors.white,
-              height: 1.25,
-              fontWeight: FontWeight.bold
+            style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+              fontSize: 24,
+              shadows: [
+                const Shadow(offset: Offset(-2.0, -2.0), blurRadius: 2.0, color: Colors.white),
+              ],
             ),
           ),
           Text(
             article.subtitle,
-            style: const TextStyle(
+            style: Theme.of(context).textTheme.bodyLarge?.copyWith(
               fontSize: 18,
-              color: Colors.white,
-              height: 1.25,
-              fontWeight: FontWeight.bold
+              shadows: [
+                const Shadow(offset: Offset(-2.0, -2.0), blurRadius: 2.0, color: Colors.white),
+              ],
             ),
           ),
         ],

@@ -15,15 +15,15 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      appBar: AppBar(
-        leading: IconButton(
-          onPressed: () {
-            Navigator.pushNamed(context, '/register');
-          },
-          icon: const Icon(Icons.arrow_back),
-        ),
-        backgroundColor: Color(0xFF33CC33),
-      ),
+      // appBar: AppBar(
+      //   // leading: IconButton(
+      //   //   onPressed: () {
+      //   //     Navigator.pushNamed(context, '/register');
+      //   //   },
+      //   //   icon: const Icon(Icons.arrow_back),
+      //   // ),
+      //   backgroundColor: Color(0xFF33CC33),
+      // ),
       body: Container(
         width: double.infinity,
         decoration: const BoxDecoration(

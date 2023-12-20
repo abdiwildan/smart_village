@@ -42,7 +42,9 @@ class AppBar extends StatelessWidget {
             children: <Widget>[
               IconButton(
                 icon: const Icon(Icons.arrow_back),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushReplacementNamed(context, '/home');
+                },
                 color: Colors.white,
               ),
               Text("Data Penduduk",

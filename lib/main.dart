@@ -2,8 +2,11 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:smart_village/Screens/base_screen.dart';
+import 'package:smart_village/Screens/data_screen.dart';
 import 'package:smart_village/Screens/detail_news_screen.dart';
 import 'package:smart_village/Screens/detail_service_screen.dart';
+import 'package:smart_village/Screens/profile_screen.dart';
+import 'package:smart_village/Screens/service_screen.dart';
 import 'package:smart_village/firebase_options.dart';
 import 'package:smart_village/repository/authentication_repository.dart';
 
@@ -32,6 +35,9 @@ class MyApp extends StatelessWidget {
         BaseScreen.routeName: (context) => const BaseScreen(),
         DetailNews.routeName: (context) => const DetailNews(),
         DetailService.routeName: (context) => const DetailService(),
+        '/profile': (context) => ProfileScreen(),
+        '/servicescreen':(context) => ServiceScreen(),
+        '/data': (context) => DataScreen()
       },
       debugShowCheckedModeBanner: false,
       theme: ThemeData(

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:animate_do/animate_do.dart';
 import 'package:get/get.dart';
 import 'package:smart_village/Screens/base_screen.dart';
+import 'package:smart_village/Screens/login_screen.dart';
 import 'package:smart_village/controllers/regist_controller.dart';
 
 class RegisterScreen extends StatefulWidget {
@@ -19,15 +20,15 @@ class _RegisterScreenState extends State<RegisterScreen> {
 
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      appBar: AppBar(
-        leading: IconButton(
-          onPressed: () {
-            Navigator.pushNamed(context, '/register');
-          },
-          icon: const Icon(Icons.arrow_back),
-        ),
-        backgroundColor: const Color(0xFF33CC33),
-      ),
+      // appBar: AppBar(
+      //   // leading: IconButton(
+      //   //   onPressed: () {
+      //   //     Navigator.pushNamed(context, '/register');
+      //   //   },
+      //   //   icon: const Icon(Icons.arrow_back),
+      //   // ),
+      //   backgroundColor: const Color(0xFF33CC33),
+      // ),
       body: Container(
         width: double.infinity,
         decoration: const BoxDecoration(
@@ -120,20 +121,20 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         const SizedBox(
                           height: 10,
                         ),
-                        Container(
-                          padding: const EdgeInsets.only(left: 10),
-                          decoration: BoxDecoration(
-                              border: Border.all(color: Colors.black45),
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(30)),
-                          child: TextFormField(
-                            controller: controller.phoneNo,
-                            decoration: InputDecoration(
-                                hintText: "Phone No",
-                                hintStyle: TextStyle(color: Colors.grey),
-                                border: InputBorder.none),
-                          ),
-                        ),
+                        // Container(
+                        //   padding: const EdgeInsets.only(left: 10),
+                        //   decoration: BoxDecoration(
+                        //       border: Border.all(color: Colors.black45),
+                        //       color: Colors.white,
+                        //       borderRadius: BorderRadius.circular(30)),
+                        //   child: TextFormField(
+                        //     controller: controller.phoneNo,
+                        //     decoration: InputDecoration(
+                        //         hintText: "Phone No",
+                        //         hintStyle: TextStyle(color: Colors.grey),
+                        //         border: InputBorder.none),
+                        //   ),
+                        // ),
                         const SizedBox(
                           height: 20,
                         ),
@@ -147,8 +148,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                 RegisterController.instance.registerUser(
                                     controller.email.text.trim(),
                                     controller.password.text.trim());
-                              Navigator.pushNamed(
-                                  context, BaseScreen.routeName);
+                                Navigator.pushNamed(
+                                    context, BaseScreen.routeName);
                               }
                             },
                             minWidth: double.infinity,
@@ -157,7 +158,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                             color: const Color(0xFF33CC33),
                             child: const Center(
                               child: Text(
-                                "LOGIN",
+                                "REGISTER",
                                 style: TextStyle(color: Colors.white),
                               ),
                             )),
@@ -165,9 +166,12 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           children: [
                             const Text("Don't Have Acount??"),
                             TextButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  Navigator.pushReplacementNamed(
+                                      context, LoginScreen.routeName);
+                                },
                                 child: const Text(
-                                  "Register",
+                                  "Login",
                                   style: TextStyle(
                                     color: Color(0xFF33CC33),
                                   ),
