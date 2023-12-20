@@ -1,7 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
 import 'package:smart_village/Screens/base_screen.dart';
-import 'package:smart_village/Screens/home_screen.dart';
 import 'package:smart_village/Screens/login_screen.dart';
 import 'package:smart_village/repository/authefication_repository/exceptions/regist_email_password_failure.dart';
 

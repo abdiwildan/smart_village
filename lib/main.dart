@@ -10,6 +10,8 @@ import 'package:smart_village/repository/authentication_repository.dart';
 import 'Screens/login_screen.dart';
 import 'Screens/register_screen.dart';
 
+
+
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform).then((value) => Get.put(AuthenticationRepository()));

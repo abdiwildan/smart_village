@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:animate_do/animate_do.dart';
 import 'package:get/get.dart';
+import 'package:smart_village/Screens/base_screen.dart';
 import 'package:smart_village/controllers/regist_controller.dart';
 
 class RegisterScreen extends StatefulWidget {
@@ -143,7 +144,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         MaterialButton(
                             onPressed: () {
                               if (_formKey.currentState!.validate()) {
-                                RegisterController.instance.registerUser(controller.email.text.trim(), controller.password.text.trim());
+                                RegisterController.instance.registerUser(
+                                    controller.email.text.trim(),
+                                    controller.password.text.trim());
+                              Navigator.pushNamed(
+                                  context, BaseScreen.routeName);
                               }
                             },
                             minWidth: double.infinity,
