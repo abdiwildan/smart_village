@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import '../Widgets/service_widget.dart';
+import '../Widgets/service.dart';
 class ServiceScreen extends StatefulWidget {
   const ServiceScreen({super.key});
 
@@ -15,11 +15,13 @@ class _ServiceScreenState extends State<ServiceScreen> {
     return const AnnotatedRegion<SystemUiOverlayStyle>(
       value: SystemUiOverlayStyle.light,
       child: Scaffold(
-        body: Column(
-          children: [
-            AppBar(),
-            Body(),
-          ],
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              AppBar(),
+              Body(),
+            ],
+          ),
         ),
       ),
     );
@@ -45,7 +47,7 @@ class Body extends StatelessWidget {
             ],
           ),
         ),
-        ServiceWidget(),
+        ServiceWidget()
       ],
     );
   }
@@ -71,9 +73,10 @@ class AppBar extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
-          IconButton(icon: const Icon(Icons.arrow_back), onPressed: () {}),
+          IconButton(icon: const Icon(Icons.arrow_back), onPressed: () {}, color: Colors.white,),
           Text("News", style: Theme.of(context).textTheme.headlineSmall?.copyWith(color: Colors.white)),
-          IconButton(onPressed: (){}, icon: const Icon(Icons.account_box_rounded))
+          IconButton(onPressed: (){}, icon: const Icon(Icons.account_box_rounded),
+          color: Theme.of(context).colorScheme.primary,)
         ]
       )
     );

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "490864973661",
+    "project_id": "smart-village-8b29b",
+    "storage_bucket": "smart-village-8b29b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:490864973661:android:c0036f75dd44c9e9467ab4",
+        "android_client_info": {
+          "package_name": "com.example.smart_village"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAK7M3i19YCkoupdrDJNZ100WW5ph-uDCs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

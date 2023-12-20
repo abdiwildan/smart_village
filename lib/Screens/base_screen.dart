@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
-
+import 'account_screen.dart';
+import 'data_screen.dart';
 import 'home_screen.dart';
-import 'newest_screen.dart';
 import 'profile_screen.dart';
 import 'service_screen.dart';
 
 class BaseScreen extends StatefulWidget {
   const BaseScreen({super.key});
+  static const routeName = '/home';
 
   @override
   State<BaseScreen> createState() => _BaseScreenState();
@@ -17,9 +18,10 @@ class _BaseScreenState extends State<BaseScreen> {
 
   static const List<Widget> _widgetOptions = <Widget>[
    HomeScreen(),
-   NewestScreen(),
+   DataScreen(),
    ProfileScreen(),
    ServiceScreen(),
+   AccountScreen()
 
   ];
   @override
@@ -44,18 +46,23 @@ class _BaseScreenState extends State<BaseScreen> {
             label: ('Home'),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.whatshot_outlined),
-            label:('Newest'),
+            icon: Icon(Icons.analytics_outlined),
+            label:('Data'),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person_outline_sharp),
-            label: ('Profile')
+            icon: Icon(Icons.account_balance_outlined),
+            label: ('Profil Desa')
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.build_circle_outlined),
+            icon: Icon(Icons.assignment_outlined),
             label: ('Service')
           ),
-          ],
+          BottomNavigationBarItem(
+            icon: Icon(Icons.account_box_outlined),
+            label: ('Account')
+          ),
+
+        ],
       )
     );
   }
