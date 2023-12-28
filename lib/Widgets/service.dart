@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:smart_village/service/ktp.dart';
 
 import '../Screens/detail_service_screen.dart';
 import '../models/service_model.dart';
@@ -38,23 +39,28 @@ class ServiceWidget extends StatelessWidget {
                           imageUrl: services[index].imageUrl,
                         ),
                         Expanded(
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text(
-                                services[index].title,
-                                maxLines: 2,
-                                overflow: TextOverflow.clip,
-                                style: Theme.of(context)
-                                    .textTheme
-                                    .bodyLarge!
-                                    .copyWith(
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                              ),
-                              const SizedBox(height: 10),
-                            ],
+                          child: TextButton(
+                            onPressed: (){
+                              Navigator.pushReplacementNamed(context, '/ktp');
+                            },
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text(
+                                  services[index].title,
+                                  maxLines: 2,
+                                  overflow: TextOverflow.clip,
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .bodyLarge!
+                                      .copyWith(
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                ),
+                                const SizedBox(height: 10),
+                              ],
+                            ),
                           ),
                         ),
                       ],

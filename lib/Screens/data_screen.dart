@@ -85,71 +85,73 @@ class _BodyState extends State<Body> {
             children: [
               Padding(
                   padding: EdgeInsets.all(5),
-                  child: Row(mainAxisSize: MainAxisSize.min, children: [
-                    Padding(
-                      padding: EdgeInsets.all(2),
-                      child: Container(
-                        height: 80,
-                        width: 150,
-                        decoration: BoxDecoration(
-                            color: Theme.of(context).colorScheme.primary,
-                            borderRadius: BorderRadius.circular(10)),
-                        child: Column(
-                          children: [
-                            Text("Jumlah Penduduk",
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 16,
-                                )),
-                            SizedBox(height: 15),
-                            Text("742 Jiwa")
-                          ],
+                  child: Expanded(
+                    child: Row(mainAxisSize: MainAxisSize.min, children: [
+                      Padding(
+                        padding: EdgeInsets.all(2),
+                        child: Container(
+                          height: 80,
+                          width: 150,
+                          decoration: BoxDecoration(
+                              color: Theme.of(context).colorScheme.primary,
+                              borderRadius: BorderRadius.circular(10)),
+                          child: Column(
+                            children: [
+                              Text("Jumlah Penduduk",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 16,
+                                  )),
+                              SizedBox(height: 15),
+                              Text("742 Jiwa")
+                            ],
+                          ),
                         ),
                       ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.all(2),
-                      child: Container(
-                        height: 80,
-                        width: 80,
-                        decoration: BoxDecoration(
-                            color: Theme.of(context).colorScheme.primary,
-                            borderRadius: BorderRadius.circular(10)),
-                        child: Column(
-                          children: [
-                            Text("Laki-Laki",
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 16,
-                                )),
-                            SizedBox(height: 15),
-                            Text("345 Jiwa")
-                          ],
+                      Padding(
+                        padding: EdgeInsets.all(2),
+                        child: Container(
+                          height: 80,
+                          width: 80,
+                          decoration: BoxDecoration(
+                              color: Theme.of(context).colorScheme.primary,
+                              borderRadius: BorderRadius.circular(10)),
+                          child: Column(
+                            children: [
+                              Text("Laki-Laki",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 16,
+                                  )),
+                              SizedBox(height: 15),
+                              Text("345 Jiwa")
+                            ],
+                          ),
                         ),
                       ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.all(2),
-                      child: Container(
-                        height: 80,
-                        width: 80,
-                        decoration: BoxDecoration(
-                            color: Theme.of(context).colorScheme.primary,
-                            borderRadius: BorderRadius.circular(10)),
-                        child: Column(
-                          children: [
-                            Text("Perempuan",
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 16,
-                                )),
-                            SizedBox(height: 15),
-                            Text("379 Jiwa")
-                          ],
+                      Padding(
+                        padding: EdgeInsets.all(2),
+                        child: Container(
+                          height: 80,
+                          width: 80,
+                          decoration: BoxDecoration(
+                              color: Theme.of(context).colorScheme.primary,
+                              borderRadius: BorderRadius.circular(10)),
+                          child: Column(
+                            children: [
+                              Text("Perempuan",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 16,
+                                  )),
+                              SizedBox(height: 15),
+                              Text("379 Jiwa")
+                            ],
+                          ),
                         ),
                       ),
-                    ),
-                  ])),
+                    ]),
+                  )),
               SizedBox(
                 height: 10,
               ),

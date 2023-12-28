@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:animate_do/animate_do.dart';
 import 'package:get/get.dart';
-import 'package:smart_village/Screens/base_screen.dart';
 import 'package:smart_village/Screens/login_screen.dart';
 import 'package:smart_village/controllers/regist_controller.dart';
 
@@ -16,19 +15,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
   @override
   Widget build(BuildContext context) {
     final controller = Get.put(RegisterController());
-    final _formKey = GlobalKey<FormState>();
+    final formKey = GlobalKey<FormState>();
 
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      // appBar: AppBar(
-      //   // leading: IconButton(
-      //   //   onPressed: () {
-      //   //     Navigator.pushNamed(context, '/register');
-      //   //   },
-      //   //   icon: const Icon(Icons.arrow_back),
-      //   // ),
-      //   backgroundColor: const Color(0xFF33CC33),
-      // ),
       body: Container(
         width: double.infinity,
         decoration: const BoxDecoration(
@@ -63,7 +53,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 padding: const EdgeInsets.all(20),
                 child: FadeInUp(
                   child: Form(
-                    key: _formKey,
+                    key: formKey,
                     child: Column(
                       children: [
                         Text("Create New Account",
@@ -73,83 +63,82 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         ),
                         Container(
                             padding: const EdgeInsets.only(left: 10),
-                            decoration: BoxDecoration(
-                                border: Border.all(color: Colors.black45),
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(30)),
                             child: TextFormField(
+                              validator: (value) {
+                                if (value == null || value.isEmpty) {
+                                  return 'Please enter some text';
+                                }
+                                return null;
+                              },
                               controller: controller.email,
-                              decoration: InputDecoration(
-                                  hintText: "Email ",
-                                  hintStyle: TextStyle(color: Colors.grey),
-                                  border: InputBorder.none),
+                              decoration: const InputDecoration(
+                                labelText: 'Enter your Email',
+                                labelStyle: TextStyle(
+                                    color: Color(0xff8c98a3),
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w500
+                                ),
+                                border: UnderlineInputBorder(),
+                              ),
                             )),
                         const SizedBox(
                           height: 10,
                         ),
                         Container(
                             padding: const EdgeInsets.only(left: 10),
-                            decoration: BoxDecoration(
-                                border: Border.all(color: Colors.black45),
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(30)),
                             child: TextFormField(
+                              validator: (value) {
+                                if (value == null || value.isEmpty) {
+                                  return 'Please enter some text';
+                                }
+                                return null;
+                              },
                               controller: controller.fullName,
-                              decoration: InputDecoration(
-                                  hintText: "FullName",
-                                  hintStyle: TextStyle(color: Colors.grey),
-                                  border: InputBorder.none),
+                              decoration: const InputDecoration(
+                                labelText: 'Enter your Fullname',
+                                labelStyle: TextStyle(
+                                    color: Color(0xff8c98a3),
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w500),
+                                border: UnderlineInputBorder(),
+                              ),
                             )),
                         const SizedBox(
                           height: 10,
                         ),
                         Container(
                           padding: const EdgeInsets.only(left: 10),
-                          decoration: BoxDecoration(
-                              border: Border.all(color: Colors.black45),
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(30)),
                           child: TextFormField(
+                            validator: (value) {
+                              if (value == null || value.isEmpty) {
+                                return 'Please enter some text';
+                              }
+                              return null;
+                            },
                             controller: controller.password,
                             obscureText: true,
-                            decoration: InputDecoration(
-                                hintText: "Password",
-                                hintStyle: TextStyle(color: Colors.grey),
-                                border: InputBorder.none),
+                            decoration: const InputDecoration(
+                              labelText: 'Enter your Password',
+                              labelStyle: TextStyle(
+                                  color: Color(0xff8c98a3),
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w500),
+                              border: UnderlineInputBorder(),
+                            ),
                           ),
                         ),
                         const SizedBox(
                           height: 10,
                         ),
-                        // Container(
-                        //   padding: const EdgeInsets.only(left: 10),
-                        //   decoration: BoxDecoration(
-                        //       border: Border.all(color: Colors.black45),
-                        //       color: Colors.white,
-                        //       borderRadius: BorderRadius.circular(30)),
-                        //   child: TextFormField(
-                        //     controller: controller.phoneNo,
-                        //     decoration: InputDecoration(
-                        //         hintText: "Phone No",
-                        //         hintStyle: TextStyle(color: Colors.grey),
-                        //         border: InputBorder.none),
-                        //   ),
-                        // ),
-                        const SizedBox(
-                          height: 20,
-                        ),
-                        const Text("forgot Password?"),
                         const SizedBox(
                           height: 10,
                         ),
                         MaterialButton(
                             onPressed: () {
-                              if (_formKey.currentState!.validate()) {
+                              if (formKey.currentState!.validate()) {
                                 RegisterController.instance.registerUser(
                                     controller.email.text.trim(),
                                     controller.password.text.trim());
-                                Navigator.pushNamed(
-                                    context, BaseScreen.routeName);
                               }
                             },
                             minWidth: double.infinity,
@@ -164,7 +153,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                             )),
                         Row(
                           children: [
-                            const Text("Don't Have Acount??"),
+                            const Text("Already An Account??"),
                             TextButton(
                                 onPressed: () {
                                   Navigator.pushReplacementNamed(

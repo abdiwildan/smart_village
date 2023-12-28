@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:smart_village/Screens/login_screen.dart';
-import 'package:smart_village/repository/authentication_repository.dart';
 
 class AccountScreen extends StatelessWidget {
   const AccountScreen({super.key});

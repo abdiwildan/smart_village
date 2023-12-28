@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:smart_village/Screens/base_screen.dart';
 
 import '../widgets/profile_widget.dart';
 
