@@ -39,7 +39,7 @@ class MyApp extends StatelessWidget {
         '/profile': (context) => const ProfileScreen(),
         '/servicescreen':(context) => const ServiceScreen(),
         '/data': (context) => const DataScreen(),
-        '/ktp' :(context) => ServiceKTP(),
+        '/ktp' :(context) => const ServiceKTP(),
 
       },
       debugShowCheckedModeBanner: false,

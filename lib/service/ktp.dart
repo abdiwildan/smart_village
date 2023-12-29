@@ -218,31 +218,32 @@ class _ServiceKTPState extends State<ServiceKTP> {
       debugPrint(dataDecode.toString());
 
       if (res.statusCode == 200) {
-        return showDialog<void>(
-          context: context,
-          barrierDismissible: false, // user must tap button!
-          builder: (BuildContext context) {
-            return AlertDialog(
-              title: const Text('Informasi'),
-              content: SingleChildScrollView(
-                child: ListBody(
-                  children: const <Widget>[
-                    Text("File berhasil diupload"),
-                  ],
-                ),
-              ),
-              actions: [
-                TextButton(
-                  child: const Text('OK'),
-                  onPressed: () {
-                    //
-                    Navigator.of(context, rootNavigator: false).pop();
-                  },
-                ),
-              ],
-            );
-          },
-        );
+        // return showDialog<void>(
+
+        //   context: context,
+        //   barrierDismissible: false, // user must tap button!
+        //   builder: (BuildContext context) {
+        //     return AlertDialog(
+        //       title: const Text('Informasi'),
+        //       content: SingleChildScrollView(
+        //         child: ListBody(
+        //           children: const <Widget>[
+        //             Text("File berhasil diupload"),
+        //           ],
+        //         ),
+        //       ),
+        //       actions: [
+        //         TextButton(
+        //           child: const Text('OK'),
+        //           onPressed: () {
+        //             //
+        //             Navigator.of(context, rootNavigator: false).pop();
+        //           },
+        //         ),
+        //       ],
+        //     );
+        //   },
+        // );
       } else {}
     } catch (e) {
       debugPrint('$e');
